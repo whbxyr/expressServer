@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>获取课程</title>
+</head>
+<body>
+  test
+</body>
+<script>
+  var url = '/getLatest24HourChapterList';
+  var xhr = new XMLHttpRequest();
+  xhr.open('get', url);
+  xhr.responseType = 'json';
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log(xhr.response);
+      }
+    }
+  };
+  xhr.send();
+  // fetch(url)
+  //   .then(function (response) {
+  //     console.log('200ok', response.body);
+  //   })
+  //   .catch(function (err) {
+  //     console.log(err);
+  //   });
+</script>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "chapterlist",
+  "version": "1.0.0",
+  "description": "获取最近的24小时内的章节列表",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "许源锐",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "supervisor": "^0.12.0"
+  }
+}
