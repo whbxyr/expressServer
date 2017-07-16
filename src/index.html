@@ -8,8 +8,9 @@
   <div id="list"></div>
 </body>
 <script>
-  var list;
   var url = '/courseList/getLatest24HourChapterList';
+
+  // 使用 XMLHttpRequest 的api发送异步请求
   var xhr = new XMLHttpRequest();
   xhr.open('get', url);
   xhr.responseType = 'json';
@@ -21,12 +22,12 @@
     }
   };
   xhr.send();
+
+  // 使用 fetch 的api发送异步请求
   fetch(url)
     .then(function (response) {
       response.text().then(function (responseText) {
-        console.log(typeof responseText);
-        list = JSON.parse(responseText);
-        console.log(list);
+        console.log(JSON.parse(responseText));
       });
     })
     .catch(function (err) {
