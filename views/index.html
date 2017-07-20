@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>获取课程——ejs模板</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="container">
+    <% if (data) { %>
+      <table cellspacing="0" class="total">
+        <% data.forEach(function (row) { %>
+          <tr>
+            <td rowspan="<%= row.ateachers.length + 1 %>"><%= row.tname %></td>
+            <td><%= row.cname %></td>
+            <td style="padding: 0;">
+              <table cellspacing="0" class="part">
+                <tr>
+                  <td>http://127.0.0.1:3000/courseList/getLatest24HourChapterList</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                </tr>
+              </table>
+            </tr>
+          </tr>
+          <% row.ateachers.forEach(function (item) { %>
+            <tr>
+              <td colspan="2"><%= item.aname %></td>
+            </tr>
+          <% })%>
+        <% }) %>
+      </table>
+    <% } %>
+  </div>
+</body>
+</html>
