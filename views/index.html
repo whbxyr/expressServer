@@ -11,28 +11,60 @@
       <table cellspacing="0" class="total">
         <% data.forEach(function (row) { %>
           <tr>
-            <td rowspan="<%= row.ateachers.length + 1 %>"><%= row.tname %></td>
-            <td><%= row.cname %></td>
+            <td rowspan="<%= row.ateachers.length + 1 %>"><%= row.cname %></td>
+            <td><%= row.tname %></td>
             <td style="padding: 0;">
               <table cellspacing="0" class="part">
                 <tr>
-                  <td>http://127.0.0.1:3000/courseList/getLatest24HourChapterList</td>
+                  <td>
+                    <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= row.sid %></a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>2</td>
+                  <td>
+                    <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= row.sid %></a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>3</td>
+                  <td>
+                    <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= row.sid %></a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>4</td>
+                  <td>
+                    <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= row.sid %></a>
+                  </td>
                 </tr>
               </table>
             </tr>
           </tr>
           <% row.ateachers.forEach(function (item) { %>
             <tr>
-              <td colspan="2"><%= item.aname %></td>
+              <td><%= item.aname %></td>
+              <td style="padding: 0;">
+                <table cellspacing="0" class="part">
+                  <tr>
+                    <td>
+                      <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= item.aid %></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= item.aid %></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= item.aid %></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="http://www.weclassroom.com/class/<%= row.tid %>">http://www.weclassroom.com/class/<%= item.aid %></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
             </tr>
           <% })%>
         <% }) %>

@@ -1,24 +1,42 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	background-color: #ccc;
+  background-color: #efefef;
 }
 .total {
-	margin: 10px auto;
-	border-collapse: collapse;
+  margin: 10px auto;
+  border-collapse: collapse;
 }
 .total td {
-	border: 1px solid #000;
+  border-radius: 5px;
+  background-color: pink;
+  border: 1px solid #000;
 }
 .total .part {
-	border: 0;
+  width: 100%;
+  border: 0;
 }
 .total .part td {
-	border: 0;
-	border-bottom: 1px solid #000;
+  border: 0;
+  border-bottom: 1px solid #000;
 }
 .total .part tr:last-child td {
-	border: 0;
+  border: 0;
+}
+.total .part a {
+  text-decoration: none;
+}
+.total .part a:link {
+  color: #797979;
+}
+.total .part a:visited {
+  color: #797979;
+}
+.total .part a:hover {
+  color: #f00;
+}
+.total .part a:active {
+  color: #797979;
 }
